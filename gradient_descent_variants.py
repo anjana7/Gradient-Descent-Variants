@@ -4,10 +4,17 @@
 # In[ ]:
 
 
+get_ipython().run_line_magic('matplotlib', 'inline')
 import numpy as np
+import seaborn as sns
 import matplotlib.pyplot as plt
-import pandas as pd
+import matplotlib.animation as animation
+from scipy import stats 
+import math
+from sklearn.datasets.samples_generator import make_regression 
+from mpl_toolkits.mplot3d import Axes3D
 from sklearn.preprocessing import StandardScaler
+
 
 
 # In[ ]:
@@ -339,17 +346,6 @@ def do_mini_batch_gradient_descent(x, y, theta_init, step=0.001, maxsteps=10, pr
 
 
 # In[ ]:
-
-
-get_ipython().run_line_magic('matplotlib', 'inline')
-import numpy as np
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from scipy import stats 
-import math
-from sklearn.datasets.samples_generator import make_regression 
-from mpl_toolkits.mplot3d import Axes3D
 
 
 x, y = make_regression(n_samples = 5000, 
